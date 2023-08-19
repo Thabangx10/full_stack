@@ -5,7 +5,8 @@ const {verifyAToken} = require('../middleware/Authentication')
 // Import all model's objects
 const {users, books, authors, orders} = require('../model')
 // ===User's router ====
-routes.get('users', (req, res) => {
+
+routes.get('/users', (req, res) => {
     users.fetchUsers(req, res)
 })
 routes.get('/user/:id', (req, res) => {
